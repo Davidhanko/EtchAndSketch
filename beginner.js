@@ -35,6 +35,7 @@ function resetGrid(){
 function createDiv(size) {
     const div = document.createElement('div');
     div.classList.add('box');
+    div.setAttribute("id","box")
     div.style.minWidth = `${size}px`;
     div.style.height = `${size}px`;
 
@@ -49,13 +50,16 @@ function createGrid(size) {
     }
 }
 function onCreation() {
+    let currentOpacity=0
     const divs = document.querySelectorAll(".box")
     divs.forEach(div => {
-        div.addEventListener('mouseover', event => {
-            // When the cursor enters the div, change its background color to black
-            event.target.style.backgroundColor = 'black';
+        div.addEventListener('mouseenter', event => {
+            // When the cursor enters the div, change its background color to black and adds opacity
+            currentOpacity=currentOpacity+0.1
+            event.target.style.backgroundColor = `black`;
         });
     });
+
 }
 
 
