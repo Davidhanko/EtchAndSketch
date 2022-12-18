@@ -36,6 +36,7 @@ function createDiv(size) {
     const div = document.createElement('div');
     div.classList.add('box');
     div.setAttribute("id","box")
+    div.count=0
     div.style.minWidth = `${size}px`;
     div.style.height = `${size}px`;
 
@@ -55,11 +56,13 @@ function onCreation() {
     divs.forEach(div => {
         div.addEventListener('mouseenter', event => {
             // When the cursor enters the div, change its background color to black and adds opacity
-            currentOpacity=currentOpacity+0.1
             event.target.style.backgroundColor = `black`;
         });
+        div.addEventListener("mouseenter", (e)=>{
+            e.target.count += 1;
+            e.target.style.opacity = 0.1 * e.target.count;
     });
 
-}
+})}
 
 
