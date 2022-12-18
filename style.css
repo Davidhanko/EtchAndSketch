@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.container{
+    border: solid 5px black;
+    margin-top: 2%;
+    margin-bottom: 25px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rangeHelper{
+    margin-left: 25px;
+    display: flex;
+    flex-shrink: 0;
+    gap: 24px;
+
+}
+.spanRange{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.configSize{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: lightgray;
+    outline: none;
+    cursor: pointer;
+    width: 250px;
+}
+
+.configSize::-webkit-slider-runnable-track {
+    background-color: #333333;
+    background: #333333;
+    height: 5px;
+    border-radius: 4px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.configSize::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 10px;
+    border-radius: 5px;
+    background: black;
+    margin-top: -10px;
+}
+
+.infoBox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.rButton{
+    margin-top: 15px;
+}
+.reset{
+    width: 150px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    background: lightgray;
+    align-self: center;
+    cursor: pointer;
+}
+
+.inputText{
+    font-family: "Comic Neue", sans-serif;
+    font-size: 50px;
+}
+
+.box{
+    flex: 1;
+}
+
+.fixedUI{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
