@@ -21,8 +21,9 @@ function changeSize(){
     size = configSize.value;
 }
 function removeGrid(){
-    while(container.hasChildNodes()){
+    if(container.hasChildNodes()) {
         container.removeChild(container.firstChild)
+        removeGrid()
     }
 }
 function resetGrid(){
